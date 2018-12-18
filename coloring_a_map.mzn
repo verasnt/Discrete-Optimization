@@ -13,7 +13,7 @@ var COLOR: Liang;
 var COLOR: Yi;
 var COLOR: Jing;
 var COLOR: Yang;
-var COLOR: Jian;
+var COLOR: Jiao;
 
 constraint Liang != Yong;
 constraint Yong != Yi;
@@ -36,4 +36,14 @@ constraint Xu != Yan;
 constraint Xu != Qing;
 constraint Yan != Si ;
 constraint Yan != Ji;
+constraint Yan != Qing;
+constraint Yan != Yu;
+constraint Qing != Ji ;
+constraint Ji != Si;
+constraint Si != Bing;
+constraint Bing != Ji ;
+constraint You != Bing ;
+constraint You != Ji;
+
+solve satisfy;
 
