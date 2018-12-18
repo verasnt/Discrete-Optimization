@@ -14,3 +14,26 @@ var COLOR: Yi;
 var COLOR: Jing;
 var COLOR: Yang;
 var COLOR: Jian;
+
+constraint Liang != Yong;
+constraint Yong != Yi;
+constraint Yong != Jing;
+constraint Yong != Si;
+constraint Yi != Jing;
+constraint Yi != Jiao;
+constraint Jiao != Jing;
+constraint Jiao != Yang;
+constraint Jing != Yang;
+constraint Jing != Yong ;
+constraint Jing != Si;
+constraint Jing != Yu;
+constraint Yang != Yu;
+constraint Yang != Xu;
+constraint Yu != Si;
+constraint Yu != Yan;
+constraint Yu != Xu;
+constraint Xu != Yan;
+constraint Xu != Qing;
+constraint Yan != Si ;
+constraint Yan != Ji;
+
