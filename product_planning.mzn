@@ -11,17 +11,17 @@ array[RESOURCE] of float: capacity;
 
 %Units of each resource required to produce
 % 1 unit of product
-array[PRODUCT, RESOURCE] of float: consumption;
+array[PRODUCT,RESOURCE] of float: consumption;
 
 %Variables: how much should we make of each product
 array[PRODUCT] of var int: produce;
 
 %Must produce a non-negative amount
-constraint forall(p in PRODUCT)(produce[p] >= 0)
+constraint forall(p in PRODUCT)(produce[p] >= 0);
 
  %Production can only use the available resources
  constraint forall(r in RESOURCE)(sum(p in PRODUCT)
-   (consumption[p,r] * produce[p]) <= capacity
+   (consumption[p,r] * produce[p]) <= capacity[r]
  );
  
  %Maximize profit
