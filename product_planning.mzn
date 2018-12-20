@@ -20,7 +20,8 @@ array[PRODUCT] of var int: produce;
 constraint forall(p in PRODUCT)(produce[p] >= 0);
 
  %Production can only use the available resources
- constraint forall(r in RESOURCE)(sum(p in PRODUCT)
+ constraint forall(r in RESOURCE)(
+   sum(p in PRODUCT)
    (consumption[p,r] * produce[p]) <= capacity[r]
  );
  
